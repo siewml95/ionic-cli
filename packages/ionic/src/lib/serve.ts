@@ -740,7 +740,7 @@ class IonicLabServeCLI extends ServeCLI<IonicLabServeCLIOptions> {
 
     const pkg = await this.e.project.requirePackageJson();
 
-    const url = `${serveDetails.protocol}://localhost:${serveDetails.port}`;
+    const url = `${serveDetails.protocol}://ec2-52-56-87-119e.eu-west-2.compute.amazonaws.com:${serveDetails.port}`;
     const appName = this.e.project.config.get('name');
     const labArgs = [url, '--host', labDetails.address, '--port', String(labDetails.port), '--project-type', labDetails.projectType];
     const nameArgs = appName ? ['--app-name', appName] : [];
